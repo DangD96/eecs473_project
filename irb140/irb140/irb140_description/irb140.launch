@@ -41,15 +41,15 @@
 
 <node name="spawn_sdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block -x 0.40 -y -0.0 -z 0.01 -Y 0" />
 
-<node name="spawn_sdf2" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block2 -x 0.40 -y -0.25 -z 0.01 -Y 0" />
+<node name="spawn_sdf2" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block2 -x 0.45 -y -0.0 -z 0.01 -Y 0" />
 
-<node name="spawn_sdf3" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block3 -x 0.45 -y -0.0 -z 0.01 -Y 0" />
+<node name="spawn_sdf3" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block3 -x 0.50 -y -0.0 -z 0.01 -Y 0" />
 
-<node name="spawn_sdf4" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block4 -x 0.45 -y -0.25 -z 0.01 -Y 0" />
+<node name="spawn_sdf4" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block4 -x 0.40 -y -0.15 -z 0.01 -Y 1.5708" />
 
-<node name="spawn_sdf5" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block5 -x 0.50 -y -0.0 -z 0.01 -Y 0" />
+<node name="spawn_sdf5" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block5 -x 0.40 -y -0.2 -z 0.01 -Y 1.5708" />
 
-<node name="spawn_sdf6" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block6 -x 0.50 -y -0.25 -z 0.01 -Y 0" />
+<node name="spawn_sdf6" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block6 -x 0.40 -y -0.25 -z 0.01 -Y 1.5708" />
 
 <node name="spawn_sdf7" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block7 -x 0.55 -y -0.0 -z 0.01 -Y 0" />
 

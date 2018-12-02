@@ -1,5 +1,11 @@
-//Start the magic object finder action server: rosrun magic_object_finder magic_object_finder
-//then run this node
+// David Dang djd122
+
+// Start the magic object finder action server: rosrun magic_object_finder magic_object_finder
+// then run this node - rosrun cartesian_motion_commander magic_object_finder_test
+
+// I created this node to test whether the magic object finder action server could successfully identify the toy blocks that were spawned in gazebo
+
+// this was used to help me identify the correct quaternions for object oriented at 0 radians and 1.5708 radians (0 and 90 degrees)
 
 #include <ros/ros.h>
 using namespace std;

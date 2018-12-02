@@ -42,7 +42,6 @@ cs_add_executable(cart_move_ac_irb5400 src/cart_move_ac_irb5400.cpp)
 cs_add_executable(jenga_tower_builder src/jenga_tower_builder.cpp)
 cs_add_executable(magic_object_finder_test src/magic_object_finder_test.cpp)
 
-
 #the following is required, if desire to link a node in this package with a library created in this same package
 # edit the arguments to reference the named node and named library within this package
 target_link_libraries(example_generic_cartesian_move_ac cartesian_motion_commander)
