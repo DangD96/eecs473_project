@@ -39,11 +39,23 @@
   <!-- start up cartesian action  server -->
   <node name = "irb140_cart_move_as" pkg = "irb140_planner" type = "irb140_cart_move_as" output= "screen"/>
 
-<node name="spawn_sdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block -x 0.5 -y 0.0 -z 0.01 -Y 1.0" />
+<node name="spawn_sdf" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block -x 0.40 -y -0.0 -z 0.01 -Y 0" />
 
-<node name="spawn_sdf2" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block2 -x 0.6 -y 0.0 -z 0.01 -Y 1.0" />
+<node name="spawn_sdf2" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block2 -x 0.40 -y -0.25 -z 0.01 -Y 0" />
 
-<node name="spawn_sdf3" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block3 -x 0.7 -y 0.0 -z 0.01 -Y 1.0" />
+<node name="spawn_sdf3" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block3 -x 0.45 -y -0.0 -z 0.01 -Y 0" />
+
+<node name="spawn_sdf4" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block4 -x 0.45 -y -0.25 -z 0.01 -Y 0" />
+
+<node name="spawn_sdf5" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block5 -x 0.50 -y -0.0 -z 0.01 -Y 0" />
+
+<node name="spawn_sdf6" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block6 -x 0.50 -y -0.25 -z 0.01 -Y 0" />
+
+<node name="spawn_sdf7" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block7 -x 0.55 -y -0.0 -z 0.01 -Y 0" />
+
+<node name="spawn_sdf8" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block8 -x 0.55 -y -0.25 -z 0.01 -Y 0" />
+
+<node name="spawn_sdf9" pkg="gazebo_ros" type="spawn_model" args="-file $(find exmpl_models)/toy_block/toy_block.sdf -sdf -model toy_block9 -x 0.60 -y -0.1 -z 0.01 -Y 0" />
 
   <!--include file="$(find example_opencv)/launch/find_block.launch">
   </include-->

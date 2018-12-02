@@ -8,9 +8,9 @@
 
 // launch with roslaunch irb140_description irb140.launch, which places a block at x=0.5, y=0
 // rosrun magic_object_finder magic_object_finder
-// then run this node
+// then run this node - rosrun cartesian_motion_commander jenga_tower_builder
 
-//this node uses the carMoveActionServer along with magic_object_finder to identity target blocks and move them to assemble a small jenga tower
+// this node uses the carMoveActionServer along with magic_object_finder to identity target blocks and move them to assemble a small jenga tower
 
 #include <ros/ros.h>
 #include <actionlib/client/simple_action_client.h>
@@ -138,16 +138,16 @@ int main(int argc, char** argv) {
     tool_affine.translation() = O_des; 
     
     //Hard coded toy_block destinations
-    Eigen::Vector3d one_des, two_des, three_des, four_des, five_des, six_des, seven_des, eight_des, nine_des;
-    one_des << 0, 0, -1; // [x,y,theta]
-    two_des << 0, 0, -1;
-    three_des << 0, 0, -1;
-    four_des << 0, 0, -1;
-    five_des << 0, 0, -1;
-    six_des << 0, 0, -1;
-    seven_des << 0, 0, -1;
-    eight_des << 0, 0, -1;
-    nine_des << 0, 0, -1;
+    Eigen::Vector2d one_des, two_des, three_des, four_des, five_des, six_des, seven_des, eight_des, nine_des;
+    one_des << 0.45, 0.4; // [x_des, y_des]
+    two_des << 0.52, 0.4;
+    three_des << 0.58, 0.4;
+    four_des << 0.5, 0.46; 
+    five_des << 0.5, 0.4;
+    six_des << 0.5, 0.33;
+    seven_des << 0.45, 0.4;
+    eight_des << 0.52, 0.4;
+    nine_des << 0.58, 0.4;
 
     tool_pose = xformUtils.transformEigenAffine3dToPoseStamped(tool_affine, "system_ref_frame");
     ROS_INFO("requesting plan to gripper-down pose:");
@@ -226,7 +226,12 @@ int main(int argc, char** argv) {
 
 		//move block to my specified location		
 		ROS_INFO("Moving to target location");
-        tool_pose.pose.position.y=0.5;      
+		tool_pose.pose.position.x=one_des[0];
+        tool_pose.pose.position.y=one_des[1]; 
+        tool_pose.pose.orientation.x=0; // [0,0,0,1] menans perfectly aligned to base frame
+        tool_pose.pose.orientation.y=0;
+        tool_pose.pose.orientation.z=0;
+        tool_pose.pose.orientation.w=1;    
         ROS_INFO("requesting plan to descend:");
         xformUtils.printPose(tool_pose);
         rtn_val = cart_motion_commander.plan_cartesian_traj_qprev_to_des_tool_pose(nsteps, arrival_time, tool_pose);
@@ -311,7 +316,12 @@ int main(int argc, char** argv) {
 
 		//move block to my specified location		
 		ROS_INFO("Moving to target location");
-        tool_pose.pose.position.y=0.6;      
+		tool_pose.pose.position.x=two_des[0];
+        tool_pose.pose.position.y=two_des[1];
+        tool_pose.pose.orientation.x=0;  
+        tool_pose.pose.orientation.y=0;
+        tool_pose.pose.orientation.z=0;
+        tool_pose.pose.orientation.w=1;     
         ROS_INFO("requesting plan to descend:");
         xformUtils.printPose(tool_pose);
         rtn_val = cart_motion_commander.plan_cartesian_traj_qprev_to_des_tool_pose(nsteps, arrival_time, tool_pose);
@@ -396,7 +406,12 @@ int main(int argc, char** argv) {
 
 		//move block to my specified location		
 		ROS_INFO("Moving to target location");
-        tool_pose.pose.position.y=0.7;      
+		tool_pose.pose.position.x=three_des[0];
+        tool_pose.pose.position.y=three_des[1];
+        tool_pose.pose.orientation.x=0;  
+        tool_pose.pose.orientation.y=0;
+        tool_pose.pose.orientation.z=0;
+        tool_pose.pose.orientation.w=1;     
         ROS_INFO("requesting plan to descend:");
         xformUtils.printPose(tool_pose);
         rtn_val = cart_motion_commander.plan_cartesian_traj_qprev_to_des_tool_pose(nsteps, arrival_time, tool_pose);
